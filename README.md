@@ -150,7 +150,11 @@ Content-Type: application/json
   "error": "Libro no encontrado"
 }
 ```
-<p>Para una mayor escalabilidad, se podría considerar migrar la base de datos a un servidor remoto o utilizar servicios de almacenamiento en la nube.</p>
+# Limitaciones y mejoras futuras
+<ul>
+<li><p>Se podrían implementar mecanismos de seguridad adicionales, como la encriptación de datos sensibles y el control de acceso basado en roles.</p></li>
+<li><p>Para una mayor escalabilidad, se podría considerar migrar la base de datos a un servidor remoto o utilizar servicios de almacenamiento en la nube.</p></li>
+</ul>
 
 # Contribuciones
 Si deseas contribuir a este proyecto, puedes hacerlo abriendo issues o enviando pull requests. ¡Estaremos encantados de revisar y colaborar contigo!
