@@ -81,15 +81,17 @@ Content-Type: application/json
 }
 ```
 <h3>Crear un nuevo libro (POST /books)</h3>
-<span style="color:red">Solicitud:</span>
+<span >Solicitud:</span>
 POST /books
 # Content-Type: application/json
+
 ```json
 {
   "title": "Nuevo libro",
   "author": "Autor del nuevo libro"
 }
 ```
+  
 <b>Respuesta exitosa:</b>
 
 HTTP/1.1 201 Created
