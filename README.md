@@ -80,7 +80,7 @@ Content-Type: application/json
 }
 </code>
 <h3>Crear un nuevo libro (POST /books)</h3>
-<b style="color:red;">Solicitud:</b>
+<span style="color:red">Solicitud:</span>
 POST /books
 Content-Type: application/json
 <code>
