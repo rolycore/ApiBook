@@ -18,12 +18,13 @@ La API RESTful proporciona funcionalidades básicas para administrar una colecci
 <h2>Estructura de un libro</h2>
 Un libro tiene la siguiente estructura:
 
-json
+```json
 {
   "id": 1,
   "title": "Título del libro",
   "author": "Autor del libro"
 }
+```
 <ul>
   <li>id (entero): Identificador único del libro.</li>
  <li>title (cadena): Título del libro.</li>
@@ -39,7 +40,7 @@ GET /books
 Respuesta exitosa:
 HTTP/1.1 200 OK
 Content-Type: application/json
-<code>
+```json
 [
   {
     "id": 1,
@@ -57,96 +58,107 @@ Content-Type: application/json
     "author": "George Orwell"
   }
 ]
-</code>
+```
 <h3>Obtener un libro por su ID (GET /books/{bookId})</h3>
 <b>Solicitud:</b>
 GET /books/1
 
 HTTP/1.1 200 OK
 Content-Type: application/json
-<code>
+```json
 {
   "id": 1,
   "title": "The Great Gatsby",
   "author": "F. Scott Fitzgerald"
 }
-</code>
+```
 <b>Respuesta de error (libro no encontrado):</b>
 HTTP/1.1 404 Not Found
 Content-Type: application/json
-<code>
+```json
 {
   "error": "Libro no encontrado"
 }
-</code>
+```
 <h3>Crear un nuevo libro (POST /books)</h3>
 <span style="color:red">Solicitud:</span>
 POST /books
-Content-Type: application/json
-<code>
+# Content-Type: application/json
+```json
 {
   "title": "Nuevo libro",
   "author": "Autor del nuevo libro"
 }
-</code>
-Respuesta exitosa:</b>
+```
+<b>Respuesta exitosa:</b>
 
 HTTP/1.1 201 Created
 Content-Type: application/json
-<code>
+```json
 {
   "id": 4,
   "title": "Nuevo libro",
   "author": "Autor del nuevo libro"
 }
-</code>
-Actualizar un libro existente (PUT /books/{bookId})
-Solicitud:
+```
+# Actualizar un libro existente (PUT /books/{bookId})
+# Solicitud:
 
 PUT /books/4
 Content-Type: application/json
-<code>
+```json
 {
   "title": "Libro actualizado",
   "author": "Autor actualizado"
 }
-</code>
-Respuesta exitosa:
+```
+# Respuesta exitosa:
 HTTP/1.1 200 OK
 Content-Type: application/json
-<code>
+```json
 {
   "id": 4,
   "title": "Libro actualizado",
   "author": "Autor actualizado"
 }
-</code>
-Respuesta de error (libro no encontrado):
+```
+# Respuesta de error (libro no encontrado):
 HTTP/1.1 404 Not Found
 Content-Type: application/json
-<code>
+```json
 {
   "error": "Libro no encontrado"
 }
-</code>
-Eliminar un libro (DELETE /books/{bookId})
+```
+# Eliminar un libro (DELETE /books/{bookId})
 Solicitud:
 
-DELETE /books/4
+# DELETE /books/4
 
 HTTP/1.1 200 OK
 Content-Type: application/json
-<code>
+```json
 {
   "message": "Libro eliminado correctamente"
 }
-</code>
-Respuesta de error (libro no encontrado):
+```
+# Respuesta de error (libro no encontrado):
 
 HTTP/1.1 404 Not Found
 Content-Type: application/json
-<code>
+```json
 {
   "error": "Libro no encontrado"
 }
-</code>
+```
+# Limitaciones y mejoras futuras
+<ul>
+<li><p>Se podrían implementar mecanismos de seguridad adicionales, como la encriptación de datos sensibles y el control de acceso basado en roles.</p></li>
+<li><p>Para una mayor escalabilidad, se podría considerar migrar la base de datos a un servidor remoto o utilizar servicios de almacenamiento en la nube.</p></li>
+</ul>
+
+# Contribuciones
+Si deseas contribuir a este proyecto, puedes hacerlo abriendo issues o enviando pull requests. ¡Estaremos encantados de revisar y colaborar contigo!
+
+# Licencia
+Este proyecto se encuentra bajo la <a href="https://opensource.org/licenses/MIT">Licencia MIT</a>.
