@@ -150,3 +150,10 @@ Content-Type: application/json
   "error": "Libro no encontrado"
 }
 ```
+<p>Para una mayor escalabilidad, se podría considerar migrar la base de datos a un servidor remoto o utilizar servicios de almacenamiento en la nube.</p>
+
+# Contribuciones
+Si deseas contribuir a este proyecto, puedes hacerlo abriendo issues o enviando pull requests. ¡Estaremos encantados de revisar y colaborar contigo!
+
+# Licencia
+Este proyecto se encuentra bajo la <a href="https://opensource.org/licenses/MIT">Licencia MIT</a>.
